@@ -1,12 +1,5 @@
-﻿DROP TABLE IF EXISTS Dept_manager CASCADE;
-DROP TABLE IF EXISTS Dept_emp CASCADE;
-
-DROP TABLE IF EXISTS Salaries CASCADE;
-
-DROP TABLE IF EXISTS Employees CASCADE;
-
-DROP TABLE IF EXISTS Titles CASCADE;
-DROP TABLE IF EXISTS Departments CASCADE;
+﻿
+DROP TABLE IF EXISTS Dept_manager, Dept_emp, Salaries, Employees, Titles, Departments CASCADE;
 
 CREATE TABLE departments (
     dept_no VARCHAR(4) NOT NULL PRIMARY KEY,
@@ -45,7 +38,7 @@ CREATE TABLE dept_emp (
         REFERENCES employees (emp_no),
     FOREIGN KEY (dept_no)
         REFERENCES departments (dept_no),
-    CONSTRAINT "pk_Dept_emp" PRIMARY KEY (
+    CONSTRAINT "pk_dept_emp" PRIMARY KEY (
         "emp_no", "dept_no"
      )
 );
@@ -57,7 +50,7 @@ CREATE TABLE dept_manager (
         REFERENCES departments (dept_no),
     FOREIGN KEY (emp_no)
         REFERENCES employees (emp_no),
-    CONSTRAINT "pk_Dept_manager" PRIMARY KEY (
+    CONSTRAINT "pk_dept_manager" PRIMARY KEY (
         "dept_no", "emp_no"
      )
 );
