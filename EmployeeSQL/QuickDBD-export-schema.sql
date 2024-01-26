@@ -1,13 +1,11 @@
 ﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
-
 DROP TABLE IF EXISTS Dept_manager CASCADE;
 DROP TABLE IF EXISTS Dept_emp CASCADE;
 
 DROP TABLE IF EXISTS Salaries CASCADE;
 DROP TABLE IF EXISTS Employees CASCADE;
-
 
 DROP TABLE IF EXISTS Titles CASCADE;
 DROP TABLE IF EXISTS Departments CASCADE;
@@ -64,5 +62,3 @@ CREATE TABLE Dept_manager (
         "dept_no", "emp_no"
      )
 );
-
-
