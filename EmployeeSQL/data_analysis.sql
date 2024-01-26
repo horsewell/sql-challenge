@@ -26,3 +26,13 @@ SELECT d.dept_no, d.dept_name, e.emp_no, last_name, first_name
 FROM employees AS e
 JOIN departments AS d ON d.dept_no IN (SELECT dept_no FROM dept_manager AS de WHERE de.emp_no = e.emp_no)
 ORDER BY d.dept_name ASC 
+
+-- 4. List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
+
+SELECT d.dept_no, e.emp_no, last_name, first_name, d.dept_name
+FROM employees AS e
+JOIN salaries AS s ON e.emp_no = s.emp_no
+JOIN departments AS d ON d.dept_no IN (SELECT dept_no FROM dept_emp AS de WHERE de.emp_no = e.emp_no);
+
+-- 5. List the first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
+
