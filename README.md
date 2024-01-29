@@ -25,7 +25,7 @@ For this project, you’ll design the tables to hold the data from the CSV files
 
 1. List the employee number, last name, first name, sex, and salary of each employee
 
-![Database output from SQL 1](images/data-analysis-output-1.png =50%x50% "Database output from SQL 1")
+![Database output from SQL 1](images/data-analysis-output-1.png "Database output from SQL 1")
 
 2. List the first name, last name, and hire date for the employees who were hired in 1986
 
